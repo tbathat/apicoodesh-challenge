@@ -1,5 +1,6 @@
 const api = require("./api");
 const express = require("express");
+const db = require("./db")
 
 const server = express();
 
