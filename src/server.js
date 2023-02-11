@@ -1,11 +1,11 @@
 const api = require("./api");
 const express = require("express");
-//const db = require("./db") Tô confusa em como importar o db aqui no modulo do servidor
+
+const  connectToDataBase = require("./db");
 
 const server = express();
 
 server.use(express.json());
-
 server.listen(8081);
 
 //Rota padrão inicial solicitada no desafio
