@@ -1,16 +1,18 @@
-const dbArticles = require("mongodb");
+const { MongoClient } = require("mongodb");
 
-function connectToDataBase() {
-dbArticles.connect(
-    "mongodb+srv://tabpradier:vip123@cluster0.vigcwtz.mongodb.net/?retryWrites=true&w=majority", 
-    { 
-        useNewUrlParser: true,
-        useUnifiedTipology: true
-});
+const client = new MongoClient(process.env.MONGO_URL);
 
-const db = dbArticles.connection;
-db.on("error", (error) => console.error(error));
-db.once("open", () => console.log("Connected to DataBase!"))
+/*async function main() {
+  // Use connect method to connect to the server
+  await client.connect();
+  console.log("Connected successfully to server");
+
+  return "done.";
 }
 
-module.exports = connectToDataBase;
+main()
+  .then(console.log)
+  .catch(console.error)
+  .finally(() => client.close()); */
+
+module.exports = client;
