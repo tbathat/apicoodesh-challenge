@@ -3,6 +3,7 @@ const express = require("express");
 const client = require("./db");
 
 const server = express();
+console.log("🚀 Server is running");
 
 server.use(express.json());
 server.listen(8081);
