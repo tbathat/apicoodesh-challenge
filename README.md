@@ -42,7 +42,7 @@
 
 <h4>Obrigatório 1 - Você deverá desenvolver as seguintes rotas:</h4>
 
-[GET]/:  Retornar um Status: 200 e uma Mensagem "Back-end Challenge 2021 🏅 - Space Flight News"
+~~[GET]/:  Retornar um Status: 200 e uma Mensagem "Back-end Challenge 2021 🏅 - Space Flight News"~~
 
 [GET]/articles/:   Listar todos os artigos da base de dados, utilizar o sistema de paginação para não sobrecarregar a REQUEST
 
