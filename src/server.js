@@ -1,65 +1,26 @@
-require('dotenv').config();
+require("dotenv").config();
 const express = require("express");
-const client = require("./db");
+const mongoose = require("mongoose");
+
+const routes = require("../src/routes");
+const services = require("../src/api");
+
+const PORT = process.env.SERVER_PORT;
+const HOST = process.env.SERVER_HOST;
+const MONGO_STRING = process.env.MONGO_URL;
 
 const server = express();
-console.log("🚀 Server is running");
+
+mongoose.connect(MONGO_STRING);
 
 server.use(express.json());
-server.listen(8081);
+server.use(routes);
 
-//Retornar um Status: 200 e uma Mensagem "Back-end Challenge 2021 🏅 - Space Flight News
-server.get("/", async (req, res) => {
+server.listen(PORT, HOST, () => {
+  // salva todos artigos no BD
+  services.loadArticles();
 
-const db = client.db("spaceflightnews");
-const collection = db.collection('articles');
-
-const insertResult = await collection.insertMany([{
-    "id": "string",
-    "featured": false,
-    "title": "string",
-    "url": "string",
-    "imageUrl": "string",
-    "newsSite": "string",
-    "summary": "string",
-    "publishedAt": "string",
-    "launches": [
-      {
-        "id": "string",
-        "provider": "string"
-      }
-    ],
-    "events": [
-      {
-        "id": "string",
-        "provider": "string"
-      }
-    ]
-
-}]);
-console.log('Inserted documents =>', insertResult);
-
-/*Listar todos os artigos da base de dados, utilizar o sistema de paginação para não sobrecarregar 
-a REQUEST -> [GET]/articles/: */
-server.get("/articles/:", (req, res) => {})
-
-//Obter a informação somente de um artigo -> [GET]/articles/{id}
-server.get("/articles/{id}", (req, res) => {});
-
-//Adicionar um novo artigo -> [PUT]/articles/:
-server.put("/articles/:", (req, res) => {});
-
-//Atualizar um artigo baseado no id -> [POST]/articles/{id}:
-server.post("/articles/{id}:", (req, res) => {});
-
-//Remover um artigo baseado no id -> [DELETE]/articles/{id}:
-server.delete("/articles/{id}:", (req, res) => {});
-
-
-// the following code examples can be pasted here...
-    return res.send ("Back-end Challenge 2021 🏅 - Space Flight News");
-
+  console.log(`Servidor escutando na porta: ${process.env.SERVER_PORT}`);
 });
 
-
-
+console.log("🚀 Server is running");
