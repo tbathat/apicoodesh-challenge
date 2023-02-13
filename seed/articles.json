@@ -1,22 +1,12 @@
 {
-    "id": "string",
-    "featured": false,
-    "title": "string",
-    "url": "string",
-    "imageUrl": "string",
-    "newsSite": "string",
-    "summary": "string",
-    "publishedAt": "string",
-    "launches": [
-      {
-        "id": "string",
-        "provider": "string"
-      }
-    ],
-    "events": [
-      {
-        "id": "string",
-        "provider": "string"
-      }
-    ]
-  }
+  "_id": "1",
+  "featured": false,
+  "title": "SpaceX breaks pad turnaround record in support of Starlink",
+  "url": "https://www.nasaspaceflight.com/2023/02/starlink-5-4-and-2-5/",
+  "imageUrl": "https://www.nasaspaceflight.com/wp-content/uploads/2023/02/FovkzPBXsAA_h3v-1170x780.jpeg",
+  "newsSite": "NASASpaceflight",
+  "summary": "The first of two Starlink launches in close succession, Starlink Group 5-4 lifted off at 12:10 AM EST (05:10 UTC) on Sunday, Feb. 12. The mission broke the pad turnaround record for both Space Launch Complex 40 (SLC-40) at Cape Canaveral Space Force Station in Florida and the overall record across all three Falcon 9 launch pads.",
+  "publishedAt": "2023-02-12T05:35:29.000Z",
+  "launches": [],
+  "events": []
+}
