@@ -13,6 +13,3 @@
 
 - Rodar o comando `yarn start` para conectar o server e database.
 
-<h2>Links para concluir o teste</h2>
-
-- 
