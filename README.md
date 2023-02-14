@@ -14,7 +14,9 @@
 - Rodar o comando `yarn start` para conectar o server e database.
 
 <h2>Links para conclusão do teste técnico</h2>
+
 - Deploy: https://apicoodesh-challenge-production.up.railway.app/.
+
 - Vídeo de apresentação: https://www.loom.com/share/09d119d975d94b14a2690d5a9975a28f.
 
 Este é um desafio da Coodesh!
